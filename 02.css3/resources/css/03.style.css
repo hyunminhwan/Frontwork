@@ -1,0 +1,174 @@
+h2{color :blue;}
+
+/* ===========================1.속성 선택자====================== */
+
+/* div요소들 중 name 속성값이 name1과"일치"하는요소 */
+div[name=name1]{
+    background-color: aqua;
+}
+/* div요소들 중 name 속성값이 name1과"포함"하는요소(공백으로 구분,단어단위) */
+div[name~=name1]{
+    color:deeppink ;
+}
+/* div요소들 중 class 속성값이 class로"시작"하는요소*/
+div[class^=class]{
+    color:blue
+}
+/* div요소들 중 class 속성값이 class로"시작"하는  요소(단어단위로 -로 구분)*/
+div[class|=class]{
+    background-color: cadetblue;
+}
+/* div요소들 중 class 속성값이 ss로 "끝" 나는요소*/
+div[class$=ss]{
+    font-size: 20px;
+}
+/* div요소들 중 class 속성값이 i과"포함"하는요소 */
+div[class*=i]{
+    border :4px dotted
+}
+
+/* 응용 : class속성값이 div-class인 요소들 중에서 name속성값이
+        name3이 포함되어 있는 요소 스타일 */
+div[class=div-class][name~=name3]{
+    background-color: blueviolet;
+}
+/* ==================2.자손 선택자와 후손 선택자====================== */
+/* id가 test1인 요소의 자손들 중 h4요소만 선택 */
+#test1>h4{
+    background-color: aqua;
+}
+/* ul의 자손 요소들 선택 */
+#test1>ul>li{
+    background-color: bisque;
+}
+/* id가 test1인 요소의 후손들 중 li 요소 선택 */
+#test1 li{
+    color: blueviolet;
+}
+
+/* ==================3.동위 선택자====================== */
+
+/* id가 test2인 형제들 중 바로 뒤에 나오는 div 요소 하나만 */
+#test2+div{
+    color: blue;
+}
+#test2+ul{
+    color: blue;  /* 선택안됨(바로 뒤의 요소가 아니기 때문) */
+}
+
+/* id가 test2인 형제들 요소 전부 */
+/* #test2~div{
+    background-color:lightslategray;
+} */
+#test2~ul{
+    background-color:lightslategray;
+}
+/* ==================4.반응 선택자====================== */
+
+.area{
+    width : 100px;
+    height : 100px;
+    background-color: aqua;
+}
+#active-test:active{
+    background-color: blueviolet;
+    color: blue;
+}
+#hover-test:hover{
+    background-color: orange;
+    color: red;
+}
+
+a#link:link{color :aquamarine} /* 방문전*/
+a#link:hover{color: brown;}/* 마우스대면*/
+a#link:active{color: blue;}/* 클릭*/
+a#link:visited{color: chartreuse;}/* 방문후*/
+
+
+
+/* ==================5. 상태 선택자====================== */
+/* 클릭하면 글씨도 커지게 */
+input[type=checkbox]:checked{
+    width:30px;
+    height:30px;
+    
+}
+/* #apple:active {
+    font-size: 50px;
+} */
+input[type=checkbox]:checked+label{
+    font-size: 30px;
+}
+
+input[name^=user]:focus{
+    background-color: pink;
+}
+
+button:enabled{
+    background-color: blueviolet;
+}
+button:disabled{
+    background-color: aqua;
+}
+/* ==================6.일반 구조 선택자====================== */
+div#summer :first-child{
+    background-color: bisque;
+}
+div#summer :last-child{
+    background-color: aqua;
+}
+div#summer :nth-child(2){
+    background-color:pink;
+}
+/* 짝수번째 */
+div#summer :nth-child(2n){
+    color:red;
+}
+/* 홀수번째 */
+div#summer :nth-child(2n+1){
+    color:cyan;
+}
+div#summer :nth-last-child(2){
+    background-color: darkkhaki
+}
+
+/* ==================7.형태 구조 선택자====================== */
+/* 첫번째는 div인데 p태그로 잘못 기재했다고 인식 작동 안됨.
+#fall p:first-child{ 첫번째가 중요 태그는 중요하지않음
+    background-color: bisque;
+} */
+#fall p:first-of-type{background-color: aquamarine;}
+#fall p:last-of-type{background-color: blueviolet;}
+#fall p:nth-of-type(3){background-color: darkgoldenrod;}
+/* 짝수 */
+#fall p:nth-of-type(2n){background-color: chartreuse;}
+/* 홀수 */
+#fall p:nth-of-type(2n+1){background-color:cyan;}
+#fall p:nth-last-of-type(4){color: brown;}
+/* ==================8.부정 선택자====================== */
+#winter :not(div:first-child){
+    background-color: chartreuse;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
