@@ -26,6 +26,7 @@ div[class$=ss]{
 div[class*=i]{
     border :4px dotted
 }
+.class
 
 /* 응용 : class속성값이 div-class인 요소들 중에서 name속성값이
         name3이 포함되어 있는 요소 스타일 */

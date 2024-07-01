@@ -1,0 +1,15 @@
+header{
+    background-color: darkgreen;
+    text-align: center;
+}
+header > h1 {
+    color: white;
+}
+section,aside{
+    padding: 0 10px;
+}
+footer{
+    background-color: darkgreen;
+    text-align: center;
+    color: white;
+}

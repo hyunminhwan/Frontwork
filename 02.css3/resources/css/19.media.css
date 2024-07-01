@@ -1,0 +1,138 @@
+/*css 미디어쿼리
+:미디어쿼리는 단말기 유형,화면 해상도,뷰포트 너비 등에 따라 스타일을 적용 할 때 사용
+*미디어 유형(단말기 유형)
+    -all : 모든장치
+    -print : 인쇄 결과물 및 출력 미리보기 화면에 표시 중인 문서
+    -screen : 스크린 화면
+    -speech : 음성 합성장치
+
+*논리 연산자
+ -and : 
+ -not : 
+ -only : 오로지 이것만
+ -쉼표(,):or를 의미
+ */
+header {
+    background-color: darkgreen;
+    text-align: center;
+}
+
+header>h1 {
+    color: white;
+}
+
+section,
+aside {
+    padding: 0 10px;
+}
+
+footer {
+    background-color: darkgreen;
+    text-align: center;
+    color: white;
+}
+
+@media screen and (max-width:600px) {
+
+    /* 전체 */
+    #wrapper {
+        width: 100%;
+    }
+
+    /* 헤더 */
+    header {
+        height: 60px;
+        line-height: 60px;
+    }
+
+    /* 본문 */
+    section {
+        height: 300px;
+        background-color: aquamarine;
+    }
+
+    /* aside */
+    aside {
+        background-color: blue;
+        color: white;
+        text-align: center;
+    }
+
+    /* footer */
+    footer {
+        height: 60px;
+        line-height: 60px;
+    }
+
+}
+
+@media screen and (min-width:601px) and (max-width:1000px) {
+
+    /* 전체 */
+    #wrapper {
+        width: 100%;
+    }
+
+    /* 헤더 */
+    header {
+        height: 60px;
+        line-height: 60px;
+    }
+
+    /* 본문 */
+    section {
+        float: left;
+        width: 65%;
+        height: 600px;
+        background-color: aquamarine;
+    }
+
+    /* aside */
+    aside {
+        float: right;
+        width: 28%;
+        height: 600px;
+        background-color: rgb(179, 230, 26);
+        color: white;
+        text-align: center;
+    }
+
+    /* footer */
+    footer {
+        clear: both;
+        height: 60px;
+        line-height: 60px;
+    }
+
+}
+
+@media screen and (min-width:1001px) {
+    #wrapper {
+        width: 100%;
+    }
+
+    header {
+        height: 120px;
+        line-height: 120px;
+    }
+
+    section {
+        float: right;
+        width: 65%;
+        height: 700px;
+        background-color: aquamarine;
+    }
+
+    aside {
+        float: left;
+        width: 31%;
+        height: 700px;
+        background-color: chartreuse;
+    }
+
+    footer {
+        height: 60px;
+        clear: both;
+        line-height: 60px;
+    }
+}
