@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수와 자료형</title>
+</head>
+<body>
+    <h1>변수와 자료형</h1>
+    <h2>변수 선언시 var뿐만 아니라 let, const를 이용하여 선언 가능</h2>
+    <h3>* var,let,const의 차이점</h3>
+
+    <h4>1) 변수 선언 방법</h4>
+    <button onclick="diffDeclare();">클릭</button>
+
+    <script>
+        function diffDeclare() {
+            //1. var은 중복선언 가능(단점), 재할당 가능
+            var userId = "user01";
+            console.log(userId);
+            var userId = "user02";
+            console.log(userId);
+
+            userId="user03";
+            console.log(userId);
+            console.log("=============================================");
+            //2.let은 중복선언 불가능(장점)
+            let userPw = "pass01";
+            console.log(userPw);
+
+
+            // let userPw = "pass02";
+            // console.log(userPw);
+
+            userPw="pass03";
+            console.log(userPw);
+
+            console.log("=============================================");
+
+            //3. const는 중복선언 불가능,재할당 불가능(상수 같은 개념==한번 초기화된 값 변경 불가)
+            //      그러나 객체안의 자료는 변경가능
+            const userName ="동길홍";
+            console.log(userName);
+
+            // const userName ="홍길동"; //중복선언 불가  오류오류
+
+            // userName ="홍길동";  //재할당 불가 오류 
+            // console.log(userName);
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
