@@ -1,4 +1,7 @@
-fieldset{
-    text-align: center;
- 
-}
+* {margin: 0 auto;}
+h1 {text-align: center; margin-top: 20px;}
+div {width:700px; border: 1px solid black;}
+td {height:40px;}
+label {padding-left: 20px;}
+select {width: 100px;}
+.btn {width: 120px; height: 35px;}

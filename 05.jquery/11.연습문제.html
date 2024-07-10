@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>연습문제</title>
+    <style>
+        table{
+            border: 2px solid;
+            border-collapse: collapse;
+        }
+        th,td{
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>게시판 리스트</h1>
+
+    <table class="arr">
+        <thead>
+            <th>글번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>조회수</th>
+            <th>작성일</th>
+        </thead>
+        <tbody>
+        <tr>
+            <td>3</td>
+            <td>세번째 글 제목</td>
+            <td>user01</td>
+            <td>23</td>
+            <td>2023-03-31</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>두번째 글 제목</td>
+            <td>user02</td>
+            <td>15</td>
+            <td>2023-03-13</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>첫번째 글 제목</td>
+            <td>admin</td>
+            <td>75</td>
+            <td>2023-03-12</td>
+        </tr>
+    </tbody>
+    </table>
+    <div id="area"></div>
+    <script>
+        $(()=>{
+            $('tbody').find('tr').each(function(index,value){
+                $(this).click(function(){
+                    let user =$(this).children('td');
+                    $('#area').html(`선택한 글은 : ${user[0].innerHTML}/${user[1].innerHTML}/${user[2].innerHTML}/${user[3].innerHTML}/${user[4].innerHTML}` )
+                    console.log($(this).children('td'));
+                    // const array =[];
+                    // $(this).find('td').each(function(i,d){
+                    //     array.push($(d).text());
+                    //     console.log(d)
+                    //         $('#area').html(`선택한 글은 : ${array[0]}/${array[1]}/${array[2]}/${array[3]}/${array[4]}` )
+                    // })
+            })
+        })         
+    })
+    //$('#area').html(`${array[0]}`)
+    </script>
+</body>
+</html>
