@@ -1,0 +1,109 @@
+*{list-style: none; margin: 0 auto; background-color:black; text-decoration: none;}
+body {
+    width: 1000px;
+}
+/* 로고 */
+.logo{
+    float: left;
+    width: 200px;
+    height: 100px;
+    cursor: pointer;
+}
+/* nav */
+header>nav{float: right;}
+.menu{
+    float: left;
+    width: 150px;
+    height: 100px;
+    font-size: 2em;
+    line-height: 100px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    position: relative;
+
+}
+.hov{
+  width: 100%;
+  display: none;
+  background-color: white;
+  position: absolute; 
+  text-align: center;
+  color: black;
+  z-index: 5;
+
+}
+
+
+.hov>li{
+    padding: 5px 0; 
+    background-color:white;
+    text-align: left;
+}
+.hov>li:hover{
+    background-color: gray;
+}
+
+.hov>li>a{
+    font-size: 25px;
+    color: black;
+    background-color: white;
+}
+
+
+/* 메인사진 */
+#main{
+    clear: both;
+    width: 1000px;
+    overflow: hidden;
+    display: flex;
+    margin: 10px 0;
+    height: 1050px;
+}
+
+.mainImg{
+    position: absolute; 
+    width: 1000px;
+    height: 1050px;
+    
+}
+
+
+/* 랭킹 */
+table{
+    color: white;
+    float: left;
+    width: 50%;
+    height: 500px;
+    border: 1px solid white;
+    border-collapse: collapse;
+ 
+}
+table th{
+ text-align: center;
+ width: 40px;
+ height: 25px;
+ background-color: gray;
+}
+
+table td{
+    text-align: center;
+    width: 40px;
+    height: 25px;
+}
+/* 스냅사진 */
+#rank{
+    width: 48%;
+    float: right;
+    height: 500px;
+}
+#snap img{
+ width: 32.9%;
+}
+.snap{
+    margin-top: 20px;
+}
+footer{
+    color: white;
+}

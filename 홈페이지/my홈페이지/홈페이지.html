@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/홈페이지.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
+    <title>홈페이지 만들기</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="resources/img/로고.jpg" alt="로고사진" class="logo">
+        </div>
+        <nav>
+            <ul class="category">
+                <li class="menu">남성
+                    <ul class="hov">
+                        <li><a target="_blank" href="https://www.musinsa.com/dp/saleshop?timeSale=true&sortCode=1w&categoryCode=001">상의</a></li>
+                        <li><a target="_blank" href="https://www.musinsa.com/dp/saleshop?timeSale=true&sortCode=1w&categoryCode=003">하의</a></li>
+                        <li><a target="_blank" href="https://www.musinsa.com/dp/saleshop?timeSale=true&sortCode=1w&categoryCode=005">신발</a></li>
+                        <li><a target="_blank" href="https://www.musinsa.com/dp/saleshop?timeSale=true&sortCode=1w&categoryCode=002">아우터</a></li>
+                    </ul>
+                </li>
+                <li class="menu">여성
+                    <ul class="hov">
+                        <li><a target="_blank" href="https://www.musinsa.com/dp/saleshop?timeSale=true&sortCode=1w&categoryCode=001">상의</a></li>
+                        <li><a target="_blank" href="https://www.musinsa.com/dp/saleshop?timeSale=true&sortCode=1w&categoryCode=003">하의</a></li>
+                        <li><a target="_blank" href="https://www.musinsa.com/dp/saleshop?timeSale=true&sortCode=1w&categoryCode=005">신발</a></li>
+                        <li><a target="_blank" href="https://www.musinsa.com/dp/saleshop?timeSale=true&sortCode=1w&categoryCode=004">가방</a></li>
+                    </ul>
+                </li>
+                <li class="menu">세일
+                    <ul class="hov">
+                        <li><a href="">티셔츠</a></li>
+                        <li><a href="">청바지</a></li>
+                        <li><a href="">가방</a></li>
+                        <li><a href="">니트</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="main">
+        <img class="mainImg" src="resources/img/메인사진3.jpg">
+        <img class="mainImg" src="resources/img/메인사진1.png" alt="">
+        <img class="mainImg" src="resources/img/메인사진2.jpg">
+        <img class="mainImg" src="resources/img/main.jpg">
+    </section>
+    <table border="1">
+        <tr>
+            <th>순위</th>
+            <th>브랜드</th>
+            <th>카테고리</th>
+            <th>이름</th>
+            <th>금액</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>푸마</td>
+            <td>신발</td>
+            <td>스피드캣 OG - 블랙</td>
+            <td>139,000원</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>오드타입</td>
+            <td>립틴트</td>
+            <td>언씬 벌룬 틴트 6color</td>
+            <td>18,800원</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>프리덤</td>
+            <td>티셔츠</td>
+            <td>프리덤 메쉬 럭비 져지 (블랙)</td>
+            <td>78,000원</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>아디다스</td>
+            <td>신발</td>
+            <td>YZY FOAM RNR HP8739</td>
+            <td>129,000원</td>
+        </tr>
+    </table >
+    <div>
+        <a href="https://www.musinsa.com/app/styles/views/43269" target="_blank">
+            <img src="resources/img/스냅샷.jpg" id="rank">
+        </a>
+    </div>
+    <div id="snap">
+        <a href="https://www.musinsa.com/app/styles/views/43283" target="_blank">
+            <img src="resources/img/스냅샷2.jpg" class="snap">
+        </a>
+        <a href="https://www.musinsa.com/app/styles/views/43326" target="_blank">
+            <img src="resources/img/스냅샷3.jpg" class="snap">
+        </a>
+        <a href="https://www.musinsa.com/app/styles/views/43325" target="_blank">
+            <img src="resources/img/스냅샷4.jpg" class="snap">
+        </a>
+        
+    </div>
+    <footer>
+        <span> © 2012 MUSINSA ALL RIGHTS RESERVED</span><br>
+        <span>개인정보처리방침·이용약관</span><br>
+        <span>일부 상품의 경우 주식회사 무신사는 통신판매의 당사자가 아닌 통신판매중개자로서</span><br>
+        <span>상품, 상품정보, 거래에 대한 책임이 제한될 수 있으므로, 각 상품 페이지에서 구체적인 내용을 확인하시기 바랍니다.</span><br>
+    </footer>
+
+    <script>
+        $(() => {
+
+            //카테고리 내려오기&올라오기
+            $('.menu').hover(function () {
+                $(this).children().stop().slideDown();
+            }, function () {
+                $(this).children().stop().slideUp();
+            });
+            $('div>img').click(function () {
+                location.reload();
+            });
+
+
+            //메인사진 바꾸기
+            setInterval(slide, 2000);
+            let x = $('.mainImg');
+            console.log(x);
+            let y = 4;
+
+            function slide() {
+                y--;
+                if (y == 0) {
+                    x.fadeIn();
+                    y = 4;
+                } else {
+                    x.eq(y).fadeOut();
+                }
+            }
+            
+
+        })
+    </script>
+</body>
+
+</html>
