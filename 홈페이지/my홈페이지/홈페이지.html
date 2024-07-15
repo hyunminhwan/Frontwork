@@ -12,11 +12,11 @@
 
 <body>
     <header>
-        <div>
+
             <img src="resources/img/로고.jpg" alt="로고사진" class="logo">
         </div>
         <nav>
-            <ul class="category">
+            <ul>
                 <li class="menu">남성
                     <ul class="hov">
                         <li><a target="_blank" href="https://www.musinsa.com/dp/saleshop?timeSale=true&sortCode=1w&categoryCode=001">상의</a></li>
@@ -115,10 +115,20 @@
         $(() => {
 
             //카테고리 내려오기&올라오기
-            $('.menu').hover(function () {
-                $(this).children().stop().slideDown();
-            }, function () {
-                $(this).children().stop().slideUp();
+            // $('.menu').hover(function () {
+            //     $(this).children().stop().slideDown();
+            // }, function () {
+            //     $(this).children().stop().slideUp();
+            // });
+            // $('div>img').click(function () {
+            //     location.reload();
+            // });
+
+            $('.menu').mouseenter(function () {
+                $(this).children('.hov').stop().slideDown();
+            });
+            $('.menu').mouseleave(function () {
+                $(this).children('.hov').stop().slideUp();
             });
             $('div>img').click(function () {
                 location.reload();
